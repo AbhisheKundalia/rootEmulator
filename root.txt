@@ -1,14 +1,1 @@
-set adb=adb
-set arch=x86
-set pie=.pie
-
-%adb% push %arch%/su%pie% /system/bin/su
-%adb% shell chmod 0755 /system/bin/su
-%adb% push %arch%/su%pie% /system/xbin/su
-%adb% shell chmod 0755 /system/xbin/su
-%adb% shell su --install
-%adb% shell "su --daemon&"
-%adb% install common/Superuser.apk
-
-pause
-#exit /b
+d:/android/sdk/tools/emulator.exe -writable-system -avd Pixel25root
